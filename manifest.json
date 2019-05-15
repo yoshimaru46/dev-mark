@@ -1,0 +1,29 @@
+{
+  "name": "Dev Mark",
+  "version": "1.0",
+  "description": "",
+  "manifest_version": 2,
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "content_scripts.js"
+      ],
+      "css": [
+        "content_scripts.css"
+      ]
+    }
+  ],
+  "permissions": [
+    "storage"
+  ]
+}
