@@ -22,15 +22,11 @@ function showDevMark(env, color) {
 chrome.runtime.sendMessage({ method: "getConfig" }, async (response) => {
   const configs = JSON.parse(response.data);
   configs.configs.map(config => {
-
     const pattern = new RegExp(config.regexp);
     const result = pattern.test(location.host);
 
     if (result) {
       showDevMark(config.env, config.color);
-
     }
   });
-
-
 });

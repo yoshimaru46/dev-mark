@@ -97,6 +97,10 @@
     pointer-events: none;
 }
 
+.github-fork-ribbon-wrapper.relative {
+    position: relative;
+}
+
 .github-fork-ribbon-wrapper.fixed {
     position: fixed;
 }
@@ -166,4 +170,18 @@
     -ms-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg);
+}
+
+.sample-ribbon {
+    display:inline-block;
+    vertical-align: middle;
+}
+
+.section {
+    padding-top: 16px;
+    padding-bottom: 4px;
+}
+
+.status-wrapper {
+    display: none;
 }
