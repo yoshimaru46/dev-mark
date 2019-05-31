@@ -1,17 +1,17 @@
 function showDevMark(env, color) {
-  const wrapper = document.createElement('div')
-  wrapper.id = 'wrapper'
-  wrapper.className = `github-fork-ribbon-wrapper left fixed`
+  const wrapper = document.createElement('div');
+  wrapper.id = 'wrapper';
+  wrapper.className = `github-fork-ribbon-wrapper left fixed`;
 
-  const ribbonChild = document.createElement('span')
-  ribbonChild.className = 'github-fork-ribbon-text'
-  ribbonChild.innerText = env
+  const ribbonChild = document.createElement('span');
+  ribbonChild.className = 'github-fork-ribbon-text';
+  ribbonChild.innerText = env;
 
-  const ribbon = document.createElement('div')
-  ribbon.className = `github-fork-ribbon ${color}`
+  const ribbon = document.createElement('div');
+  ribbon.className = `github-fork-ribbon ${color}`;
 
-  ribbon.appendChild(ribbonChild)
-  wrapper.appendChild(ribbon)
+  ribbon.appendChild(ribbonChild);
+  wrapper.appendChild(ribbon);
   document.body.prepend(wrapper);
 
   document.getElementById("wrapper").onclick = function () {
@@ -27,10 +27,10 @@ chrome.runtime.sendMessage({ method: "getConfig" }, async (response) => {
     const result = pattern.test(location.host);
 
     if (result) {
-      showDevMark(config.env, config.color)
-      return
-    }
-  })
+      showDevMark(config.env, config.color);
 
-  return
+    }
+  });
+
+
 });

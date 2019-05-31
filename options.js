@@ -1,5 +1,5 @@
 function save_options() {
-  const value = document.getElementById('dev-mark-config').value
+  const value = document.getElementById('dev-mark-config').value;
 
   try {
     JSON.parse(value)
