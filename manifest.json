@@ -17,9 +17,6 @@
       ],
       "js": [
         "content_scripts.js"
-      ],
-      "css": [
-        "content_scripts.css"
       ]
     }
   ],
