@@ -1,130 +1,82 @@
 <html>
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Options</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
-  <link rel="stylesheet" href="content_scripts.css">
-  <link rel="stylesheet" href="options.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Options</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <link rel="stylesheet" href="options.css">
 </head>
 
 <body>
 
 <section class="hero is-dark is-bold">
-  <div class="hero-body">
-    <div class="container">
-      <h1 class="title is-1">
-        Dev Mark
-      </h1>
-      <h2 class="subtitle">
-        Show dev mark on development env
-      </h2>
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title is-1">
+                Dev Mark
+            </h1>
+            <h2 class="subtitle">
+                Show dev mark on development env
+            </h2>
+        </div>
     </div>
-  </div>
 </section>
 
 <section class="section color-section">
-  <div class="container is-fullhd">
-    <h3 class="title is-3">Colors:</h3>
-
-    <div class="notification">
-
-
-      <div class="sample-ribbon">
-        <div class="github-fork-ribbon-wrapper left relative">
-          <div class="github-fork-ribbon black">
-            <span class="github-fork-ribbon-text">black</span>
-          </div>
+    <div class="container is-fullhd">
+        <h3 class="title is-3">Colors:</h3>
+        <div class="notification">
+            <b>
+                <p>black, green, blue, purple, orange, red</p>
+            </b>
         </div>
-      </div>
-
-      <div class="sample-ribbon">
-        <div class="github-fork-ribbon-wrapper left relative">
-          <div class="github-fork-ribbon green">
-            <span class="github-fork-ribbon-text">green</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="sample-ribbon">
-        <div class="github-fork-ribbon-wrapper left relative">
-          <div class="github-fork-ribbon blue">
-            <span class="github-fork-ribbon-text">blue</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="sample-ribbon">
-        <div class="github-fork-ribbon-wrapper left relative">
-          <div class="github-fork-ribbon purple">
-            <span class="github-fork-ribbon-text">purple</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="sample-ribbon">
-        <div class="github-fork-ribbon-wrapper left relative">
-          <div class="github-fork-ribbon orange">
-            <span class="github-fork-ribbon-text">orange</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="sample-ribbon">
-        <div class="github-fork-ribbon-wrapper left relative">
-          <div class="github-fork-ribbon red">
-            <span class="github-fork-ribbon-text">red</span>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
 </section>
 
 <section class="section config-section">
-  <div class="container is-fullhd">
-    <h3 class="title is-3">Config: </h3>
+    <div class="container is-fullhd">
+        <h3 class="title is-3">Config: </h3>
 
-    <div class="notification">
-      <h4 class="title is-4">Example: </h4>
-      <pre id="dev-mark-config-example"></pre>
-    </div>
+        <div class="notification">
+            <h4 class="title is-4">Example: </h4>
+            <pre id="dev-mark-config-example"></pre>
+        </div>
 
-    <div class="notification">
-      <h4 class="title is-4">Value: </h4>
-      <div class="field">
-        <div class="control">
+        <div class="notification">
+            <h4 class="title is-4">Value: </h4>
+            <div class="field">
+                <div class="control">
           <textarea
-              id="dev-mark-config"
-              class="textarea"
-              placeholder="Textarea"
-              rows="15"
+                  id="dev-mark-config"
+                  class="textarea"
+                  placeholder="Textarea"
+                  rows="15"
           ></textarea>
-        </div>
-      </div>
+                </div>
+            </div>
 
-      <div class="field is-grouped">
-        <div class="control">
-          <button id="format" class="button is-text">Format</button>
-        </div>
-        <div class="control">
-          <button id="save" class="button is-link">Save</button>
-        </div>
-      </div>
+            <div class="field is-grouped">
+                <div class="control">
+                    <button id="format" class="button is-text">Format</button>
+                </div>
+                <div class="control">
+                    <button id="save" class="button is-link">Save</button>
+                </div>
+            </div>
 
-      <div id="status-wrapper" class="status-wrapper notification">
-        <div id="status"></div>
-      </div>
+            <div id="status-wrapper" class="status-wrapper notification">
+                <div id="status"></div>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 
 <footer class="footer">
-  <div class="content has-text-centered">
-    <p>
-      <strong>Dev Mark</strong> by <a href="https://github.com/yshr446">Yoshihiro Saito</a>
-    </p>
-  </div>
+    <div class="content has-text-centered">
+        <p>
+            <strong>Dev Mark</strong> by <a href="https://github.com/yoshimaru46">Yoshihiro Saito</a>
+        </p>
+    </div>
 </footer>
 
 <script src="options.js"></script>
