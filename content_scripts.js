@@ -55,24 +55,36 @@ function showDevMark(env, color) {
         background-color: #696969;
     }
 
+    .dev-mark.brown {
+        background-color: #593110;
+    }
+
+    .dev-mark.yellow {
+        background-color: #ffcf00;
+    }
+
     .dev-mark.green {
-        background-color: #006400;
+        background-color: #00ab00;
     }
 
     .dev-mark.blue {
-        background-color: #00008b;
+        background-color: #0062c6;
     }
 
     .dev-mark.purple {
-        background-color: #4b0082;
+        background-color: #800080;
+    }
+
+    .dev-mark.pink {
+        background-color: #f52394;
     }
 
     .dev-mark.orange {
-        background-color: #ff8c00;
+        background-color: #ff7c00;
     }
 
     .dev-mark.red {
-        background-color: #dc143c;
+        background-color: #ff2000;
     }
 
     .dev-mark .dev-mark-text,
