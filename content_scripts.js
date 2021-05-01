@@ -4,17 +4,17 @@ function showDevMark(env, color) {
 
     const wrapper = document.createElement('div');
     wrapper.id = 'wrapper';
-    wrapper.className = 'dev-mark-ribbon-wrapper';
+    wrapper.className = 'dev-mark-wrapper';
 
-    const ribbonChild = document.createElement('span');
-    ribbonChild.className = 'dev-mark-ribbon-text';
-    ribbonChild.innerText = env;
+    const markChild = document.createElement('div');
+    markChild.className = 'dev-mark-text';
+    markChild.innerText = env;
 
-    const ribbon = document.createElement('div');
-    ribbon.className = `dev-mark-ribbon ${ color }`;
+    const mark = document.createElement('div');
+    mark.className = `dev-mark ${color}`;
 
-    ribbon.appendChild(ribbonChild);
-    wrapper.appendChild(ribbon);
+    mark.appendChild(markChild);
+    wrapper.appendChild(mark);
 
     wrapper.onclick = () => {
         wrapper.style.display = 'none';
@@ -22,92 +22,67 @@ function showDevMark(env, color) {
 
     const style = document.createElement('style');
     style.textContent = `
-    .dev-mark-ribbon {
-        position: absolute;
+    .dev-mark-wrapper {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        margin-left: -140px;
+        width: 280px;
+        border-radius: 0 0 6px 6px;
+        overflow: hidden;
+        z-index: 9999;
+        cursor: pointer;
+    }
 
-        padding: 2px 0;
+    .dev-mark {
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-        background-color: #696969;
-
-        /* Add a drop shadow */
-        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5);
-
-        font: 700 16px Helvetica, Arial, sans-serif;
+        padding: 4px 0;
 
         z-index: 9999;
-        pointer-events: auto;
 
         opacity: 1;
         transition: opacity 0.25s ease-in-out;
     }
 
-    .dev-mark-ribbon:hover {
+    .dev-mark:hover {
         opacity: 0.25;
     }
 
-    .dev-mark-ribbon.black {
+    .dev-mark.black {
         background-color: #696969;
     }
 
-    .dev-mark-ribbon.green {
+    .dev-mark.green {
         background-color: #006400;
     }
 
-    .dev-mark-ribbon.blue {
+    .dev-mark.blue {
         background-color: #00008b;
     }
 
-    .dev-mark-ribbon.purple {
+    .dev-mark.purple {
         background-color: #4b0082;
     }
 
-    .dev-mark-ribbon.orange {
+    .dev-mark.orange {
         background-color: #ff8c00;
     }
 
-    .dev-mark-ribbon.red {
+    .dev-mark.red {
         background-color: #dc143c;
     }
 
-    .dev-mark-ribbon .dev-mark-ribbon-text,
-    .dev-mark-ribbon .dev-mark-ribbon-text:hover {
+    .dev-mark .dev-mark-text,
+    .dev-mark .dev-mark-text:hover {
+        font: 700 20px Helvetica, Arial, sans-serif;
         color: #fff;
-        text-decoration: none;
+        line-height: 24px;
         text-shadow: 0 1px rgba(0, 0, 0, 1);
-        text-align: center;
-        cursor: pointer;
+        letter-spacing: 0.6px;
 
-        width: 200px;
-        line-height: 20px;
-
-        display: inline-block;
-        padding: 2px 0;
-
-        border-width: 1px 0;
-        border-style: dashed;
-        border-color: #fff;
-        border-color: rgba(255, 255, 255, 0.7);
-    }
-
-    .dev-mark-ribbon-wrapper {
-        width: 150px;
-        height: 150px;
-        position: absolute;
-        overflow: hidden;
-        top: 0;
-        z-index: 9999;
-        pointer-events: none;
-    }
-
-    .dev-mark-ribbon-wrapper {
-        position: fixed;
-        left: 0;
-    }
-
-    .dev-mark-ribbon-wrapper .dev-mark-ribbon {
-        top: 45px;
-        left: -45px;
-        transform: rotate(-45deg);
     }`;
 
     shadow.appendChild(style);
